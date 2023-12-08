@@ -1,6 +1,6 @@
 # Blog App: A simple and elegant blog app built with Streamlit and Python
 
-Blog App is a web application that allows you to create, view, search, and manage blog posts using Streamlit and Python¹[1]. Blog App uses SQLite as the database to store the posts and their details. Blog App also provides some statistics and visualizations of the posts and authors.
+Blog App is a web application that allows you to create, view, search, and manage blog posts using Streamlit and Python. Blog App uses SQLite as the database to store the posts and their details. Blog App also provides some statistics and visualizations of the posts and authors.
 
 ## Installation
 
