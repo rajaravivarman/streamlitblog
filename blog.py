@@ -2,7 +2,6 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-import matplotlib.pyplot as plt
 
 # Connect to the database
 conn = sqlite3.connect('blog.db')
@@ -138,9 +137,4 @@ elif choice == "Manage":
         # Display a bar chart of posts by author
         st.write("Posts by author:")
         author_count = df["author"].value_counts()
-        fig, ax = plt.subplots()
-        ax.bar(author_count.index, author_count.values)
-        ax.set_xlabel("Author")
-        ax.set_ylabel("Number of posts")
-        ax.set_title("Posts by author")
-        st.pyplot(fig)
+        st.bar_chart(author_count)
