@@ -20,7 +20,7 @@ This will start a local Streamlit server and open your app in a new tab in your 
 
 ## Features
 
-Blog App has a sidebar menu with different options:
+Blog app has a sidebar menu with different options:
 
 - **Home**: This option displays the welcome message and some information about the app.
 - **View Posts**: This option displays all the posts in the blog. You can click on the "Read More" button to view the full post. You can also sort the posts by date or title using the dropdown menu.
