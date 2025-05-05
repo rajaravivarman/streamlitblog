@@ -2,6 +2,7 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
+from display_templates import title_temp,post_temp #Import Templates
 
 # Connect to the database
 conn = sqlite3.connect('blog.db')
@@ -29,29 +30,29 @@ def delete_post(title):
     c.execute('DELETE FROM posts WHERE title=?', (title,))
     conn.commit()
 
-# Define some HTML templates for displaying the posts
-title_temp = """
-<div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:10px;">
-<h4 style="color:white;text-align:center;">{}</h4>
-<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="vertical-align: middle;float:left;width: 50px;height: 50px;border-radius: 50%;">
-<h6>Author: {}</h6>
-<br/>
-<br/>
-<p style="text-align:justify"> {}</p>
-</div>
-"""
-
-post_temp = """
-<div style="background-color:#464e5f;padding:10px;border-radius:5px;margin:10px;">
-<h4 style="color:white;text-align:center;">{}</h4>
-<h6>Author: {}</h6>
-<h6>Date: {}</h6>
-<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;">
-<br/>
-<br/>
-<p style="text-align:justify"> {}</p>
-</div>
-"""
+# # Define some HTML templates for displaying the posts
+# title_temp = """
+# <div style="background-color:#464e5f;padding:10px;border-radius:10px;margin:10px;">
+# <h4 style="color:white;text-align:center;">{}</h4>
+# <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="vertical-align: middle;float:left;width: 50px;height: 50px;border-radius: 50%;">
+# <h6>Author: {}</h6>
+# <br/>
+# <br/>
+# <p style="text-align:justify"> {}</p>
+# </div>
+# """
+#
+# post_temp = """
+# <div style="background-color:#464e5f;padding:10px;border-radius:5px;margin:10px;">
+# <h4 style="color:white;text-align:center;">{}</h4>
+# <h6>Author: {}</h6>
+# <h6>Date: {}</h6>
+# <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;">
+# <br/>
+# <br/>
+# <p style="text-align:justify"> {}</p>
+# </div>
+# """
 
 # Create a sidebar menu with different options
 menu = ["Home", "View Posts", "Add Post", "Search", "Manage"]
